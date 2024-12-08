@@ -1,0 +1,39 @@
+footer {
+    // padding: 40px 12px;
+    .footer__wrap {
+        padding: 56px 12px 40px;
+    }
+    background-color: $color-icon-primary;
+    div.copyright {
+        display: flex;
+        margin-bottom: 8px;
+    }
+    img {
+        margin-right: 12px;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        color: $color-text-light-gray;
+    }
+    @include mobile-g {
+        .footer__wrap {
+            padding: 64px 0 48px;
+        }
+    }
+    @include tablet {
+        .footer__wrap {
+            padding: 80px 0 64px;
+        }
+        p {
+            width: 230px;
+        }
+    }
+    @include tablet {
+        p {
+            width: 300px;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.header {
+    margin: 0 0 24px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 12px 24px 12px;
+        img {
+            margin: 0 auto 32px;
+            width: clamp(167px, 52vw, 268px);
+        }
+        h2 {
+            // font-size: calc(20px + 66 * (100vw - 320px) / 848);
+            font-size: clamp(20px, 6.25vw, 32px);
+            font-weight: 800;
+            color: $color-text-primary;
+        }
+        p {
+            margin-top: 8px;
+            font-size: clamp(16px, 5vw, 24px);
+            font-weight: 500;
+            color: $color-text-secondary;
+        }
+        a {
+            margin-top: 32px;
+            padding: 15px 32px;
+            border: 0;
+            border-radius: 5px;
+            background-color: $color-primary-active;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $color-text-tertiary;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: $color-primary-hover;
+        }
+        @include mobile-g {
+            margin: 48px 0 32px 0;
+            img {
+                width: 268px;
+            }
+            h2 {
+                font-size: clamp(32px, 6.67vw, 48px);
+            }    
+        }
+        @include tablet {
+            margin: 86.5px 0 64px 0;
+            h2 {
+                font-size: clamp(48px, 6.25vw, 86px);
+            } 
+            p {
+                font-size: clamp(24px, 3.13vw, 40px)
+            }
+        }
+        @include desktop {
+            // h2 {
+            //     font-size: 86px;
+            // }
+        }
+    }
+    /*
+    &__bottom {
+        width: 100%;
+        height: 165px;
+        margin-top: 24px;
+        position: relative;
+        div {
+            position: absolute;
+            width: 92.5%;
+            height: 140px;
+            margin: 0 auto;
+            background-color: $color-bg-secondary;
+            border-radius: 16px;
+        }
+        div img {
+            position: absolute;
+            top: -26px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            scale: 1.0;
+            @include mobile-g {
+                width: 480px;
+            }
+        }
+        @include mobile-g {
+            height: 253px;
+            div {
+                height: 210px;
+            }
+        }
+    }
+    */
+    &__bottom {
+        width: 100%;
+        height: clamp(165px, 51.6vw, 253px);
+        position: relative;
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 92.5%;
+            height: clamp(140px, 43.75vw, 210px);
+            aspect-ratio: 2.13;
+            margin: 0 auto;
+            background-color: $color-bg-secondary;
+            border-radius: 16px;
+        }
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: clamp(320px, 100vw, 480px);
+        }
+        @include mobile-g {
+            height: 253px;
+            div {
+                width: 100%;
+                height: 210px;
+                border-radius: 32px;
+            }
+            img {
+                width: 480px;
+            }
+        }
+        @include tablet {
+            height: 315px;
+            div {
+                height: 284px;
+            }
+            img {
+                width: 627px;
+            }
+        }
+        @include desktop {
+            height: 618px;
+            div {
+                height: 477px;
+            }
+            img {
+                width: 1170px;
+            }
+        }
+    }    
+    /*
+    &__bottom {
+        position: relative;
+        background-color: blue;
+        width: 100%;
+        height: 165px;
+        background-image: url("../img/img.png") no-repeat;
+        background-position: 50%;
+        // background-size: 100% 100%;
+        .rectangle {
+            position: absolute;
+            bottom: 0px;
+            left:4%;
+            margin: 0px auto;
+            width: 92.5%;
+            height: 140px;
+            border-radius: 16px;
+            background-color: $color-bg-secondary;
+            z-index: -1;
+        }
+        
+    }
+    */
+    @include mobile-g {
+        margin: 0 0 32px 0;
+    }
+}
+
